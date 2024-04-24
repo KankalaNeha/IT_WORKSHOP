@@ -1,0 +1,247 @@
+------------------------------------------------------------------------------------------------------------------------------
+ 			    // UNIX COMMANDS EXAMPLES //
+------------------------------------------------------------------------------------------------------------------------------                                                                  
+TO CREATE FILE: 
+rgukt-basar@neha:~$ cat >file1.txt
+welcome to ubuntu
+linux and unix command
+rgukt is the best  university
+this is unix ^C
+------------------------------------------------------------------------------------------------------------------------------			
+ 			   // GREP COMMANDS IN UNIX //
+------------------------------------------------------------------------------------------------------------------------------
+TO PRINT THE DATA WHERE A WELCOME WORD IS THERE :
+rgukt-basar@neha:~$ grep "welcome" file1.txt
+welcome to ubuntu
+________________________________________________________________________________________________________
+TO PRINT MATCHING DATA: -h
+rgukt-basar@neha:~$ grep -h "to" file1.txt
+welcome to ubuntu
+________________________________________________________________________________________________________
+TO PRINT THE WORD WE PROVIDED LINE NUMBER: -n
+rgukt-basar@neha:~$ grep -n "one" file1.txt
+3:rgukt is the best university
+rgukt-basar@neha:~$ grep -n "this" file1.txt
+4:this is unix
+________________________________________________________________________________________________________
+TO PRINT THE 2 MATCHED WORDS WE PROVIDED: -e
+rgukt-basar@neha:~$  grep -e "linux" -e "unix" file1.txt
+linux and unix command
+this is unix
+________________________________________________________________________________________________________
+TO DELETE THE LINE WHICH CONSIST OF THE WORD WE PROVIDED: -v
+rgukt-basar@neha:~$  grep -v "one" file1.txt
+welcome to ubuntu
+linux and unix command
+this is unix
+________________________________________________________________________________________________________
+TO PRINT A PROVIDED WORD THAT PRESENT IN THE FILE: -o
+rgukt-basar@neha:~$  grep -o "unix" file1.txt
+unix
+unix
+-------------------------------------------------------------------------------------------------------------------------------
+     				//SORT COMMANDS//
+-------------------------------------------------------------------------------------------------------------------------------
+TO SORT IN ALPHABETICAL ORDER: sort
+rgukt-basar@neha:~$  sort month.txt
+april
+august
+december
+feburary
+january
+july
+june
+march
+may
+november
+october
+september
+________________________________________________________________________________________________________
+TO SORT IN ORDER: -M
+rgukt-basar@neha:~$  sort -M month.txt
+january
+feburary
+march
+april
+may
+june
+july
+august
+september
+october
+november
+december
+________________________________________________________________________________________________________
+SORT NUMBERS WITHOUT REMOVING DUPLICATES: -n
+rgukt-basar@neha:~$ sort -n num.txt
+1
+1
+2
+5
+6
+8
+11
+23
+100
+________________________________________________________________________________________________________
+TO SORT NUMBERS BY REMOVING DUPLICATES: -u
+rgukt-basar@neha:~$  sort -u num.txt
+1
+100
+11
+2
+23
+5
+6
+8
+------------------------------------------------------------------------------------------------------------------------------
+				//SED COMMANDS//
+------------------------------------------------------------------------------------------------------------------------------
+MAKE PARTICULAR WORD CAPITAL:
+rgukt-basar@neha:~$  sed 's/unix/UNIX/' f1.txt
+welcome to ubuntu
+linux and UNIX command
+rgukt is the one of greatest university
+this is UNIX
+________________________________________________________________________________________________________
+rgukt-basar@neha:~$  cat >emp.txt
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+8 | Pagesatvik director purchase 80000^C 
+________________________________________________________________________________________________________
+TO PRINT 2ND AND 3RD COLUMN :
+rgukt-basar@neha:~$  awk '{print $3,$2}' emp.txt
+account manager
+account clerk
+sales manager
+account manager
+sales peon
+sales clerk
+sales peon
+________________________________________________________________________________________________________
+TO PRINT THE LINES WHICH MATCH THE GIVEN PATTERN:
+rgukt-basar@neha:~$  awk '/manager/ {print}' emp.txt
+ajay manager account 45000
+varun manager sales 50000
+amit manager account 47000
+rgukt-basar@neha:~$  awk '/peon/ {print}' emp.txt
+tarun peon sales 15000
+sunil peon sales 13000
+------------------------------------------------------------------------------------------------------------------------------
+				//SORT COMMANDS//
+---------------------------------------------------------------------------------------------------------------------------------------------------
+SORT COMMANDS:
+rgukt-basar@neha:~$ man sort
+
+       -b, --ignore-leading-blanks
+              ignore leading blanks
+
+       -d, --dictionary-order
+              consider only blanks and alphanumeric characters
+
+       -f, --ignore-case
+              fold lower case to upper case characters
+
+       -g, --general-numeric-sort
+              compare according to general numerical value
+
+       -i, --ignore-nonprinting
+              consider only printable characters
+
+       -M, --month-sort
+              compare (unknown) < 'JAN' < ... < 'DEC'
+
+       -h, --human-numeric-sort
+              compare human readable numbers (e.g., 2K 1G)
+
+       -n, --numeric-sort
+              compare according to string numerical value
+
+
+       -R, --random-sort
+              shuffle, but group identical keys.  See shuf(1)
+
+       --random-source=FILE
+              get random bytes from FILE
+
+       -r, --reverse
+              reverse the result of comparisons
+
+       --sort=WORD
+              sort according to WORD: general-numeric -g, human-numeric  -h,  month
+              -M, numeric -n, random -R, version -V
+
+       -V, --version-sort
+              natural sort of (version) numbers within text
+
+       Other options:
+
+       --batch-size=NMERGE
+              merge at most NMERGE inputs at once; for more use temp files
+
+       -c, --check, --check=diagnose-first
+              check for sorted input; do not sort
+
+       -C, --check=quiet, --check=silent
+              like -c, but do not report first bad line
+
+       --compress-program=PROG
+              compress temporaries with PROG; decompress them with PROG -d
+
+   --debug
+              annotate  the part of the line used to sort, and warn about question‐
+              able usage to stderr
+
+       --files0-from=F
+              read input from the files specified by NUL-terminated names  in  file
+              F; If F is - then read names from standard input
+
+       -k, --key=KEYDEF
+              sort via a key; KEYDEF gives location and type
+
+       -m, --merge
+              merge already sorted files; do not sort
+
+       -o, --output=FILE
+              write result to FILE instead of standard output
+
+       -s, --stable
+              stabilize sort by disabling last-resort comparison
+
+       -S, --buffer-size=SIZE
+              use SIZE for main memory buffer
+
+       -t, --field-separator=SEP
+              use SEP instead of non-blank to blank transition
+
+       -T, --temporary-directory=DIR
+              use  DIR for temporaries, not $TMPDIR or /tmp; multiple options spec‐
+              ify multiple directories
+
+  --parallel=N
+              change the number of sorts run concurrently to N
+
+       -u, --unique
+              with -c, check for strict ordering; without -c, output only the first
+              of an equal run
+
+       -z, --zero-terminated
+              line delimiter is NUL, not newline
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+________________________________________________________________________________________________________
+
+
+
+
+
+
+

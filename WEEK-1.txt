@@ -1,0 +1,342 @@
+---------------------------------------------------------------------------------------------
+				**UNIX USER COMMANDS**			
+---------------------------------------------------------------------------------------------
+1.COMMAND TO SHOW YOUR USERNAME: whoami
+rgukt-basar@neha:~$ whoami
+rgukt-basar
+______________________________________________________________________________________________
+2.COMMAND TO PRINT USER IDENTITY: id
+rgukt-basar@neha:~$ id
+uid=1000(rgukt-basar) gid=1000(rgukt-basar) groups=1000(rgukt-basar),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),122(lpadmin),134(lxd),135(sambashare)
+______________________________________________________________________________________________
+3.COMMAND TO SHOW WHICH GROUPS USER BELONGS TO: groups
+rgukt-basar@neha:~$ groups
+rgukt-basar adm cdrom sudo dip plugdev lpadmin lxd sambashare
+______________________________________________________________________________________________
+4.COMMAND TO CHANGE USER PASSWORD: passwd
+rgukt-basar@neha:~$ passwd
+Changing password for rgukt-basar.
+Current password: 
+New password: 
+______________________________________________________________________________________________
+5.COMMAND TO FIND OUT WHO IS LOGGED INTO THE SYSTEM: who
+rgukt-basar@neha:~$ who
+rgukt-basar tty2         2024-04-04 11:27 (tty2)
+rgukt-basar@neha:~$ last
+rgukt-ba tty2         tty2             Thu Apr  4 11:27   still logged in
+reboot   system boot  5.15.0-43-generi Thu Apr  4 11:27   still running
+rgukt-ba tty2         tty2             Wed Apr  3 23:19 - down   (00:44)
+reboot   system boot  5.15.0-43-generi Wed Apr  3 23:19 - 00:03  (00:44)
+rgukt-ba tty2         tty2             Wed Apr  3 17:18 - down   (02:07)
+reboot   system boot  5.15.0-43-generi Wed Apr  3 17:18 - 19:26  (02:07)
+rgukt-ba tty2         tty2             Wed Apr  3 14:11 - down   (02:20)
+reboot   system boot  5.15.0-43-generi Wed Apr  3 14:11 - 16:31  (02:20)
+rgukt-ba tty2         tty2             Fri Mar 22 14:09 - down   (02:50)
+reboot   system boot  5.15.0-43-generi Fri Mar 22 14:09 - 17:00  (02:50)
+rgukt-ba tty2         tty2             Thu Mar 21 15:56 - down   (00:58)
+reboot   system boot  5.15.0-43-generi Thu Mar 21 15:56 - 16:54  (00:58)
+rgukt-ba tty2         tty2             Thu Mar 21 09:28 - down   (00:07)
+reboot   system boot  5.15.0-43-generi Thu Mar 21 09:28 - 09:36  (00:08)
+rgukt-ba tty2         tty2             Wed Mar 20 14:22 - down   (00:08)
+reboot   system boot  5.15.0-43-generi Wed Mar 20 14:22 - 14:30  (00:08)
+rgukt-ba tty2         tty2             Wed Mar 20 10:18 - down   (01:47)
+reboot   system boot  5.15.0-43-generi Wed Mar 20 10:18 - 12:05  (01:47)
+rgukt-ba tty2         tty2             Mon Mar 18 22:31 - down   (01:49)
+reboot   system boot  5.15.0-43-generi Mon Mar 18 22:31 - 00:20  (01:49)
+rgukt-ba tty2         tty2             Mon Mar 18 14:58 - down   (01:22)
+reboot   system boot  5.15.0-43-generi Mon Mar 18 14:58 - 16:20  (01:22)
+rgukt-ba tty2         tty2             Fri Mar 15 23:27 - down   (00:12)
+reboot   system boot  5.15.0-43-generi Thu Jan  5 16:21 - 12:56  (-3:25)
+
+wtmp begins Thu Jan  5 16:21:35 2023
+
+---------------------------------------------------------------------------------------------			
+			     **UNIX FILE OPERATIONS**
+---------------------------------------------------------------------------------------------
+1.COMMAND TO KNOW SERVER ADDRESS: nslookup google.com
+rgukt-basar@neha:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+** server can't find google.com: SERVFAIL
+_____________________________________________________________________________________________
+2.COMMAND TO CREATE FILES OR UPDATE ITS TIMESTAMP: touch 
+rgukt-basar@neha:~$ touch file1.txt
+_____________________________________________________________________________________________
+3.COMMAND TO CONCATENATE FILES AND PRINT TO STDOUT: cat
+rgukt-basar@neha:~$ cat >file2.txt
+welcome to IT Workshop
+we are learning unix file operations
+_____________________________________________________________________________________________
+4.COMMAND TO COPY FILES: cp
+rgukt-basar@neha:~$ cp file2.txt file1.txt
+_____________________________________________________________________________________________
+5.COMMAND TO REMOVE FILES: rm
+rgukt-basar@neha:~$ rm file1.txt
+_____________________________________________________________________________________________
+6.COMMAND TO MAKE NEW DIRECTORY: mkdir
+rgukt-basar@neha:~$ mkdir f
+_____________________________________________________________________________________________
+7.COMMAND TO REMOVE DIRECTORY: rmdir
+rgukt-basar@neha:~$ rmdir f
+_____________________________________________________________________________________________
+8.COMMAND TO CHANGE DIRECTORY: cd
+rgukt-basar@neha:~$ cd Downloads
+_____________________________________________________________________________________________
+9.COMMAND TO CONFIRM CURRENT DIRECTORY: pwd
+rgukt-basar@neha:~/Downloads$ pwd
+/home/rgukt-basar/Downloads
+_____________________________________________________________________________________________
+10.COMMAND TO LIST ALL THE DIRECTORY CONTENTS: ls
+rgukt-basar@neha:~/Downloads$ ls
+ 1702184576404.jpeg
+ 1stweek.txt
+ 2ndweek.txt
+ 2quiers
+ 3binary.java
+ 4kvideodownloaderplus_1.3.0-1_amd64.deb
+'a(1).out'
+ a.out
+ bluetooth_content_share.html
+ code_1.85.1-1702462158_amd64.deb
+ custom.java
+'Database Management Systems-1(1).pdf'
+ dd.java
+ err2.java
+'google-chrome-stable_current_amd64 (1)'
+'google-chrome-stable_current_amd64 (1).deb'
+'google-chrome-stable_current_amd64(1).deb'
+ google-chrome-stable_current_amd64.deb
+ hand5.java
+ hand6.java
+ IMG-20231106-WA0003.jpg
+ IMG-20231108-WA0057.jpg
+ modified_employeeDB.sql
+ mysql-connector-j_8.3.0-1ubuntu23.10_all
+ mysql-connector-j_8.3.0-1ubuntu23.10_all.deb
+ rethrowexception.java
+ Screenshot_2023-12-19-13-54-56-834_cn.wps.moffice_eng.jpg
+ texstudio-4.7.3-win-qt6.exe
+ University-DB.docx
+'week 1 it workshop.pdf'
+'x-xi-xii weeks.pdf'
+rgukt-basar@neha:~/Downloads$ which
+rgukt-basar@neha:~/Downloads$ man
+What manual page do you want?
+For example, try 'man man'.
+_____________________________________________________________________________________________
+11.COMMAND USED AS INTERFACE FOR WORKING WITH THE ONLINE REFERENCE MANUALS: man touch
+rgukt-basar@neha:~/Downloads$ man touch
+
+ TOUCH(1)                                                 User Commands                                                 TOUCH(1)
+
+NAME
+       touch - change file timestamps
+
+SYNOPSIS
+       touch [OPTION]... FILE...
+
+DESCRIPTION
+       Update the access and modification times of each FILE to the current time.
+
+       A FILE argument that does not exist is created empty, unless -c or -h is supplied.
+
+       A  FILE argument string of - is handled specially and causes touch to change the times of the file associated with stan‐
+       dard output.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a     change only the access time
+
+       -c, --no-create
+              do not create any files
+
+       -d, --date=STRING
+              parse STRING and use it instead of current time
+
+       -f     (ignored)
+
+       -h, --no-dereference
+              affect each symbolic link instead of any referenced file (useful only on systems that can change  the  timestamps
+              of a symlink)
+
+       -m     change only the modification time
+ Manual page touch(1) line 1/75 38% (press h for help or q to quit)
+
+ -r, --reference=FILE
+              use this file's times instead of current time
+
+       -t STAMP
+              use [[CC]YY]MMDDhhmm[.ss] instead of current time
+
+       --time=WORD
+              change the specified time: WORD is access, atime, or use: equivalent to -a WORD is modify or mtime: equivalent to
+              -m
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       Note that the -d and -t options accept different time-date formats.
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable date string such as  "Sun,  29  Feb  2004  16:21:42  -0800"  or
+       "2004-02-29  16:21:42"  or even "next Thursday".  A date string may contain items indicating calendar date, time of day,
+       time zone, day of week, relative time, relative date, and numbers.  An empty string indicates the beginning of the  day.
+       The date string format is more complex than is easily documented here but is fully described in the info documentation.
+
+AUTHOR
+       Written by Paul Rubin, Arnold Robbins, Jim Kingdon, David MacKenzie, and Randy Smith.
+
+REPORTING BUGS
+       GNU coreutils online help: <https:**www.gnu.org/software/coreutils/>
+       Report touch translation bugs to <https:**translationproject.org/team/>
+
+ Manual page touch(1) line 32/75 82% (press h for help or q to quit)
+_____________________________________________________________________________________________
+12.COMMAND TO ESTIMATE DISK USAGE IS BLOCKS: du
+rgukt-basar@neha:~/Downloads$ du
+8	./google-chrome-stable_current_amd64 (1)
+2400	./mysql-connector-j_8.3.0-1ubuntu23.10_all
+681720	.
+rgukt-basar@neha:~/Downloads$ df -l
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             791556     2308    789248   1% /run
+/dev/nvme0n1p2 244506940 30167332 201846552  14% /
+tmpfs            3957764        0   3957764   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/nvme0n1p1    523248     5368    517880   2% /boot/efi
+tmpfs             791552      112    791440   1% /run/user/1000
+_____________________________________________________________________________________________
+13.COMMAND TO DISPLAYS THE CALENDAR: cal
+rgukt-basar@neha:~/Downloads$ cal 1 2024
+    January 2024      
+Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6  
+ 7  8  9 10 11 12 13  
+14 15 16 17 18 19 20  
+21 22 23 24 25 26 27  
+28 29 30 31           
+_____________________________________________________________________________________________                     
+14.COMMAND TO DISPLAYS THE SYSTEM DATE AND TIME: date
+rgukt-basar@neha:~/Downloads$ date
+Thursday 04 April 2024 11:50:34 AM IST
+_____________________________________________________________________________________________
+15.COMMAND TO LOCATE A COMMAND: which
+rgukt-basar@neha:~/Downloads$ which -a cat
+/usr/bin/cat
+/bin/cat
+_____________________________________________________________________________________________ 
+16.COMMAND TO SHOW THE NUMBER OF FREE BLOCKS FOR THE MOUNTED FILE SYSTEM: df
+rgukt-basar@neha:~/Downloads$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             791556     2332    789224   1% /run
+/dev/nvme0n1p2 244506940 30167632 201846252  14% /
+tmpfs            3957764        0   3957764   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/nvme0n1p1    523248     5368    517880   2% /boot/efi
+tmpfs             791552      112    791440   1% /run/user/1000
+_____________________________________________________________________________________________
+17.COMMAND TO EXECUTE A COMMAND AS SOME OTHER USER OR SUPER-USER: sudo ls
+rgukt-basar@neha:~/Downloads$ sudo ls
+[sudo] password for rgukt-basar: 
+ 1702184576404.jpeg
+ 1stweek.txt
+ 2ndweek.txt
+ 2quiers
+ 3binary.java
+ 4kvideodownloaderplus_1.3.0-1_amd64.deb
+'a(1).out'
+ a.out
+ bluetooth_content_share.html
+ code_1.85.1-1702462158_amd64.deb
+ custom.java
+'Database Management Systems-1(1).pdf'
+ dd.java
+ err2.java
+ hand5.java
+ hand6.java
+ IMG-20231106-WA0003.jpg
+ IMG-20231108-WA0057.jpg
+ modified_employeeDB.sql
+ mysql-connector-j_8.3.0-1ubuntu23.10_all
+ mysql-connector-j_8.3.0-1ubuntu23.10_all.deb
+ rethrowexception.java
+ Screenshot_2023-12-19-13-54-56-834_cn.wps.moffice_eng.jpg
+ texstudio-4.7.3-win-qt6.exe
+ University-DB.docx
+'week 1 it workshop.pdf'
+'x-xi-xii weeks.pdf'
+_____________________________________________________________________________________________
+18.COMMAND To MOVE FILES OR RENAME FILES: mv 
+rgukt-basar@neha:~$ mv file1 file2
+_____________________________________________________________________________________________
+19.COMMAND TO DISPLAYS A SNAPSHOT OF ALL CURRENT PROCESSES: ps
+rgukt-basar@neha:~$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 11:27 ?        00:00:00 /sbin/init splash
+root           2       0  0 11:27 ?        00:00:00 [kthreadd]
+root           3       2  0 11:27 ?        00:00:00 [rcu_gp]
+root           4       2  0 11:27 ?        00:00:00 [rcu_par_gp]
+root           5       2  0 11:27 ?        00:00:00 [netns]
+root           7       2  0 11:27 ?        00:00:00 [kworker/0:0H-events_highpri
+root          10       2  0 11:27 ?        00:00:00 [mm_percpu_wq]
+root          11       2  0 11:27 ?        00:00:00 [rcu_tasks_rude_]
+_____________________________________________________________________________________________
+20.COMMAND TO DISPLAYS A LIVE STATUS OF CURRENT PROCESSES: top
+rgukt-basar@neha:~$ top
+top - 12:36:09 up  1:08,  1 user,  load average: 0.20, 0.33, 0.36
+Tasks: 220 total,   1 running, 219 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.8 us,  0.9 sy,  0.0 ni, 98.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7730.0 total,   4515.6 free,   1321.3 used,   1893.2 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5789.1 avail Mem 
+
+---------------------------------------------------------------------------------------------
+	I have learnt all these commands as a part of IT workshop in the beginning of WEEK-I
+Now Iam able to create files,move,rename,concatenate and change directories,change password and know username from terminal itself,move from one directory to other,know date and view calender etc..
+	Now iam going to answer to the questions given in it.
+	
+1) HOW TO CREATE A FILE?
+--> we can create file using command : touch
+ex:rgukt-basar@neha:~$ touch file1.txt
+--->we can add content and create file using command : cat
+ex:rgukt-basar@neha:~$ cat >file2.txt
+welcome to IT Workshop
+
+2)HOW TO VIEW THE LIST OF COMMANDS EXECUTED?
+-->to view list of commands executed we use command : history
+ex:rgukt-basar@neha:~$ history
+ 1484  sudo apt update
+ 1485  sudo add-apt-repository ppa:sunderme/texstudio
+ 1530  top
+ 1531  ps -ef
+ 1532  top
+ 1533  history
+
+3)HOW TO VIEW YOUR USERNAME IN UNIX?
+ex:rgukt-basar@neha:~$ whoami
+user
+
+4) LIST SOME OF THE COMMON AND MOST WIDELY USED UNIX COMMANDS.
+whoami
+touch
+cd
+who
+ls
+cat
+groups
+rm
+mkdir 
+rmdir
+
+5) HOW TO REMOVE FILES USING UNIX COMMANDS?
+ex:rgukt-basar@neha:~$ rm f1.txt
+
+6) CREATE A RGUKT NEW FILE
+ex:rgukt-basar@neha:~$ touch RGUKT
+
+
+
+
+
