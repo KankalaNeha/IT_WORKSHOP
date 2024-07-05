@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Registration</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('uploads/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            margin: 50px auto;
+            position:relative;
+            left: -500px; 
+        }
+        label {
+            font-weight: bold;
+            font-size:20px;
+        }
+        input, select {
+            font-size:16px;
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .subjects {
+            text-align: left;
+            margin: 20px 0;
+            font-size:20px;
+        }
+        .subjects input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        #amount {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #555;
+            font-weight:bold;
+        }
+    </style>
+    <script>
+        function calculateAmount() {
+            const subjects = document.querySelectorAll('.subjects input:checked');
+            const amount = subjects.length * 500;
+            document.getElementById('amount').textContent = `Amount to be paid: Rs.${amount}`;
+        }
+    </script>
+</head>
+<body>
+    <form action="register.php" method="post" enctype="multipart/form-data">
+        
+        <label for="student_id">ID</label>
+        <input type="text" id="student_id" name="student_id" required>
+        
+          <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" required>
+
+        <label for="semester">Semester</label>
+        <input type="text" id="semester" name="semester" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" required>
+
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo" required>
+
+        <div class="subjects">
+            <label>Subjects</label> <br><br>
+            <input type="checkbox" name="subjects[]" value="Web Technologies" onchange="calculateAmount()"> Web Technologies<br>
+            <input type="checkbox" name="subjects[]" value="Operating System" onchange="calculateAmount()"> Operating System<br>
+            <input type="checkbox" name="subjects[]" value="IT  Workshop" onchange="calculateAmount()"> IT  Workshop<br>
+            <input type="checkbox" name="subjects[]" value="Graphics" onchange="calculateAmount()"> Graphics<br>
+        
+        </div>
+
+        <p id="amount">Amount to be paid: 0 Rs</p>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
